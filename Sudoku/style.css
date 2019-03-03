@@ -1,0 +1,15 @@
+#sudoku 
+td{border:1px solid #cdcdcd;
+	background:#f8f8f8;
+	padding: 5px 10px;margin:0;
+	} 
+	#sudoku 
+	.l {margin:0;
+		padding:0;
+		} 
+	#sudoku 
+	input{height:30px;
+		width:30px;
+		border:0 none;
+		text-align:center;
+	}

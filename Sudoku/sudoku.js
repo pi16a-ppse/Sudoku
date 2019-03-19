@@ -11,7 +11,24 @@ function generate() {
 	for (var j=0;j<9;j++) arr.push(arr.splice((Math.random() * arr.length), 1));
 	for (var i=1;i<82;i++) { 
 		if (i%9==1) document.write('<tr>');
-		document.write( (Math.random()*10>6) ? '<td>'+arr[field.substr(i,1)-1] + '</td>' : '<td class="l"><input type="text" size="1" maxlength="1" onchange="test()" onkeydown = "javascript: return ((event.keyCode>47)&&(event.keyCode<58))"></td>' );
+		if ((Math.random()*10>6))
+		{
+			var num =arr[field.substr(i,1)-1];
+			var k=Math.floor(i/9);
+			var t=i%9;
+			if (t==0)
+			{
+				t=8;
+				k--;
+			}
+			else
+				t--;
+			document.write('<td>'+ num + '</td>');
+			sessionStorage['mas['+(k)+']['+t+']']=num;
+
+		}
+		else
+			document.write('<td class="l"><input type="text" name='+i+' autocomplete="off" size="1" maxlength="1" onchange="test(this.name,this,value)"onkeydown = "javascript: return ((event.keyCode>47)&&(event.keyCode<58))"></td>');
 		if (i%9==0) document.write('</tr>');
 	}
 }

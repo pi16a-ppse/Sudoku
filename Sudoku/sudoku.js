@@ -42,5 +42,22 @@ function change(cell,value)
 				k--;
 			}
 	sessionStorage['mas['+k+']['+t+']']=value;
+}
 
+function chekedAllCells()
+{
+
+	for (var i=0;i<9;i++) { 
+		for (var j=0;j<9;j++) 
+		{
+			if(sessionStorage['mas['+i+']['+j+']']<1)
+			{			
+				alert(i+","+j);
+				return false;	
+			}
+
+		}
+		
+	}
+	return true;
 }

@@ -28,7 +28,19 @@ function generate() {
 
 		}
 		else
-			document.write('<td class="l"><input type="text" name='+i+' autocomplete="off" size="1" maxlength="1" onchange="test(this.name,this,value)"onkeydown = "javascript: return ((event.keyCode>47)&&(event.keyCode<58))"></td>');
+			document.write('<td class="l"><input type="text" name='+i+' autocomplete="off" size="1" maxlength="1" onchange="change(this.name,this,value)"onkeydown = "javascript: return ((event.keyCode>47)&&(event.keyCode<58))"></td>');
 		if (i%9==0) document.write('</tr>');
 	}
+}
+function change(cell,value)
+{
+	var k=Math.floor(cell/9);
+	var t=(cell%9)-1;
+		if (t<0)
+			{
+				t=8;
+				k--;
+			}
+	sessionStorage['mas['+k+']['+t+']']=value;
+
 }

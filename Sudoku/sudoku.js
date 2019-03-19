@@ -1,6 +1,13 @@
 function generate() {
 	var field = '0681594327597283416342671589934157268278936145156842973729318654813465792465729831';
 	var arr = Array(1,2,3,4,5,6,7,8,9);
+	var n = 9;
+	sessionStorage['mas'] = [];
+	for (var i=0;i<9;i++) 
+	for (var j=0;j<9;j++) 	
+		sessionStorage['mas['+i+']['+j+']']=0;
+	for (var i = 0; i < n; i++)
+    	sessionStorage['mas['+i+']'] = [];
 	for (var j=0;j<9;j++) arr.push(arr.splice((Math.random() * arr.length), 1));
 	for (var i=1;i<82;i++) { 
 		if (i%9==1) document.write('<tr>');

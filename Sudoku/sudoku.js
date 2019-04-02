@@ -11,7 +11,7 @@ function generate() {
 	for (var j=0;j<9;j++) arr.push(arr.splice((Math.random() * arr.length), 1));
 	for (var i=1;i<82;i++) { 
 		if (i%9==1) document.write('<tr>');
-		if ((Math.random()*10>6))
+		if ((Math.random()*10>complication))
 		{
 			var num =arr[field.substr(i,1)-1];
 			var k=Math.floor(i/9);

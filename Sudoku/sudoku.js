@@ -89,7 +89,27 @@ function checkwin()
 			}
 			else
 			{
-				//alert(i+","+j+"2");
 				return false;
 			}
+	for (var k1=0; k1<3;k1++)
+	{
+
+		for(var k2=0;k2<3;k2++)
+		{
+			
+			for (var t=0;t<9;t++)
+				arr[t]=0;
+
+			for (var i=0;i<3;i++) 
+				for (var j=0;j<3;j++) 
+					{
+						arr[sessionStorage['mas['+(i+(k1*3))+']['+(j+(k2*3))+']']-1]++;
+					}
+					else
+					{
+						return false;
+					}
+		}
+	}
+	return true;
 }

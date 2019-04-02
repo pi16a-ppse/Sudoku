@@ -61,3 +61,19 @@ function chekedAllCells()
 	}
 	return true;
 }
+function checkwin()
+{
+	var arr=[];
+	for (var i=0;i<9;i++)
+		arr[i]=0;
+	for (var i=0;i<9;i++) 
+		for (var j=0;j<9;j++) 
+			if ((arr[(sessionStorage['mas['+i+']['+j+']']-1)])==i)
+			{
+				arr[(sessionStorage['mas['+i+']['+j+']']-1)]++;
+			}
+			else
+			{
+				return false;
+			}
+}

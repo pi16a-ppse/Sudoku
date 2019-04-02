@@ -76,4 +76,20 @@ function checkwin()
 			{
 				return false;
 			}
+
+			for (var i=0;i<9;i++)
+		arr[i]=0;
+				
+	for (var j=0;j<9;j++) 
+		for (var i=0;i<9;i++) 
+			if ((arr[(sessionStorage['mas['+i+']['+j+']']-1)])==j)
+			{
+
+				arr[(sessionStorage['mas['+i+']['+j+']']-1)]++;
+			}
+			else
+			{
+				//alert(i+","+j+"2");
+				return false;
+			}
 }

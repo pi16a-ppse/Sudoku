@@ -61,3 +61,56 @@ function chekedAllCells()
 	}
 	return true;
 }
+function checkwin()
+{
+	var arr=[];
+	for (var i=0;i<9;i++)
+		arr[i]=0;
+	for (var i=0;i<9;i++) 
+		for (var j=0;j<9;j++) 
+			if ((arr[(sessionStorage['mas['+i+']['+j+']']-1)])==i)
+			{
+				arr[(sessionStorage['mas['+i+']['+j+']']-1)]++;
+			}
+			else
+			{
+				return false;
+			}
+
+			for (var i=0;i<9;i++)
+		arr[i]=0;
+				
+	for (var j=0;j<9;j++) 
+		for (var i=0;i<9;i++) 
+			if ((arr[(sessionStorage['mas['+i+']['+j+']']-1)])==j)
+			{
+
+				arr[(sessionStorage['mas['+i+']['+j+']']-1)]++;
+			}
+			else
+			{
+				return false;
+			}
+	for (var k1=0; k1<3;k1++)
+	{
+
+		for(var k2=0;k2<3;k2++)
+		{
+			
+			for (var t=0;t<9;t++)
+				arr[t]=0;
+
+			for (var i=0;i<3;i++) 
+				for (var j=0;j<3;j++) 
+					if (arr[sessionStorage['mas['+(i+(k1*3))+']['+(j+(k2*3))+']']-1]==0)
+					{
+						arr[sessionStorage['mas['+(i+(k1*3))+']['+(j+(k2*3))+']']-1]++;
+					}
+					else
+					{
+						return false;
+					}
+		}
+	}
+	return true;
+}

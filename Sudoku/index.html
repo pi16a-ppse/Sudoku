@@ -3,11 +3,16 @@
 <script type="text/javascript" src="sudoku.js"></script>
 </head>
 <body>
+	<h3>Судоку</h3>
+	<br>
 <table id="sudoku" cellspacing="0">
 <script>
 generate()
 </script>
 </table>
+<br>
+Сложность
+<br>
 <input type="submit" name="ezy" onclick="sessionStorage['complication']=2" value="Легко">
 <input type="submit" name="normal" onclick="sessionStorage['complication']=3" value="Нормально">
 <input type="submit" name="hard" onclick="sessionStorage['complication']=4" value="Сложно">

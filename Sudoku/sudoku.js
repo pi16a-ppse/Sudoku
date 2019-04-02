@@ -102,6 +102,7 @@ function checkwin()
 
 			for (var i=0;i<3;i++) 
 				for (var j=0;j<3;j++) 
+					if (arr[sessionStorage['mas['+(i+(k1*3))+']['+(j+(k2*3))+']']-1]==0)
 					{
 						arr[sessionStorage['mas['+(i+(k1*3))+']['+(j+(k2*3))+']']-1]++;
 					}

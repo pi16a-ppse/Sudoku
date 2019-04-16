@@ -40,9 +40,9 @@ function change(cell, value) {
 	sessionStorage['mas[' + k + '][' + t + ']'] = value;
 		if (chekedAllCells())
 	if (checkwin())
-		alert ("Победа");
+		alert ("Вы победили!");
 	else 
-		alert ("Поражение");
+		alert ("Попробуйте ещё раз");
 }
 
 function chekedAllCells() {

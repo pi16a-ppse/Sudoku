@@ -38,6 +38,11 @@ function change(cell, value) {
 				k--;
 			}
 	sessionStorage['mas[' + k + '][' + t + ']'] = value;
+		if (chekedAllCells())
+	if (checkwin())
+		alert ("Победа");
+	else 
+		alert ("Поражение");
 }
 
 function chekedAllCells() {

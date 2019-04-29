@@ -46,7 +46,7 @@ function generate() {
 *
 */
 function change(cell, value) {
-	var k = Math.floor(cell / 9);
+    var k = Math.floor(cell / 9);
 	var t = (cell % 9) - 1;
 		if (t < 0) {
 				t = 8;
@@ -112,7 +112,7 @@ function checkwin() {
 				return false;
 			}
 	for (var k1 = 0; k1 < 3; k1++) {
-		for(var k2=0;k2<3;k2++) {
+		for(var k2 = 0; k2 < 3; k2++) {
 			for (var t = 0; t < 9; t++)
 				arr[t] = 0;
 			for (var i = 0; i < 3; i++) 

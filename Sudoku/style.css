@@ -4,8 +4,25 @@ td{border:1px solid #cdcdcd;
 	padding: 5px 10px;margin:0;
 	} 
 	#sudoku 
+tr.border_bottom td {
+  border-bottom:3pt solid black;
+}
+	#sudoku 
 	.l {margin:0;
 		padding:0;
+		
+		}
+	#sudoku  
+	.tright {
+		background:#f8f8f8;
+	padding: 5px 10px;margin:0;
+		border-right:3px solid black;		
+		} 
+	#sudoku  
+	.lright {
+		margin:0;
+		padding:0;
+		border-right:3px solid black;		
 		} 
 	#sudoku 
 	input{height:30px;
